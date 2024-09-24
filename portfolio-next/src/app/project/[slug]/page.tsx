@@ -161,9 +161,6 @@ const ProjectPage = ({ params }) => {
           Under arbeid: {project.inProgress ? "Ja" : "Nei"}
         </p>
       )}
-      <p className="text-gray-500 text-sm mb-4">
-        Kategori: {project.category?.title}
-      </p>
     </div>
   );
 };

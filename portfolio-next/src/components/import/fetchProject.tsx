@@ -61,6 +61,12 @@ const ProjectPostComponent = () => {
           )}
           <p className="text-gray-700 text-base mb-4">{post.description}</p>
           <p className="text-gray-500 text-sm mb-4">
+            Category: {post.category?.title}
+          </p>
+          <p className="text-gray-500 text-sm mb-4">
+            Completion Date: {post.completionDate}
+          </p>
+          <p className="text-gray-500 text-sm mb-4">
             In Progress: {post.inProgress ? "Yes" : "No"}
           </p>
         </div>

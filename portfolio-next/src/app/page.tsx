@@ -17,9 +17,9 @@ export default async function IndexPage() {
 
   return (
     <main className="flex bg-gray-100 min-h-screen flex-col p-24 gap-12">
-      <h1 className="text-4xl font-bold tracking-tighter">Portfolio</h1>
-      <div>
-        <p>My portfolio</p>
+      <h1 className="text-4xl font-bold tracking-tighter mb-8">Portfolio</h1>
+      <div className="space-y-12">
+        <p className="text-lg mb-4">My portfolio</p>
         <AuthorComponent />
         <ProjectPostComponent />
       </div>

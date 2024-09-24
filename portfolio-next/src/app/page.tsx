@@ -2,8 +2,8 @@ import Link from "next/link";
 import { defineQuery } from "next-sanity";
 
 import { client } from "@/sanity/client";
-import AuthorComponent from "@/components/import/fetchAuthor";
-import ProjectPostComponent from "@/components/import/fetchProject";
+import AuthorComponent from "./components/import/fetchAuthor";
+import ProjectPostComponent from "./components/import/fetchProject";
 
 const options = { next: { revalidate: 60 } };
 

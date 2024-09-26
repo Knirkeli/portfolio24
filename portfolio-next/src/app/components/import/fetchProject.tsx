@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
+import { Card } from "../ui/card"; // Adjust the import path as necessary
 
 const client = createClient({
   projectId: "2rar6jsc",
@@ -20,7 +21,6 @@ const fetchProjectPosts = async () => {
   const query = `*[_type == "projectPost"]{
     header,
     slug,
-    description,
     images,
     category->{
       title
@@ -46,11 +46,17 @@ const ProjectPostComponent = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 px-12">
       {projectPosts.map((post) => (
-        <Link key={post.slug.current} href={`/project/${post.slug.current}`}>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white p-4 cursor-pointer">
-            <h2 className="text-xl font-bold mb-2">{post.header}</h2>
+        <Link
+          key={post.slug.current}
+          href={`/project/${post.slug.current}`}
+          scroll={false}
+        >
+          <Card className="max-w-sm overflow-hidden shadow-lg p-4 cursor-pointer rounded-3xl transform transition duration-500 hover:scale-105">
+            <h2 className="text-xl font-bold mb-2 text-center">
+              {post.header}
+            </h2>
             {post.images && post.images.length > 0 && (
               <img
                 className="w-full h-48 object-cover mb-4"
@@ -68,7 +74,7 @@ const ProjectPostComponent = () => {
                 Under arbeid: {post.inProgress ? "Ja" : "Nei"}
               </p>
             )}
-          </div>
+          </Card>
         </Link>
       ))}
     </div>

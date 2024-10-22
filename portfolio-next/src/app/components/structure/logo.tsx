@@ -155,8 +155,8 @@ const DisplayHeaderLogo: React.FC = () => {
       <img
         src={headerLogo.image.asset.url}
         alt={headerLogo.alt}
-        width={50}
-        height={50}
+        width={80}
+        height={80}
       />
     </a>
   );

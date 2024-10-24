@@ -7,10 +7,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs";
 
 const ProjectsBlogTabs = () => {
   return (
-    <Tabs
-      defaultValue="projects"
-      className="grid lg:w-[10/12] w-full justify-center py-4"
-    >
+    <Tabs defaultValue="projects" className="grid w-full justify-center py-4">
       <TabsList className="bg-inherit">
         <TabsTrigger value="projects" className="text-lg">
           Prosjekter

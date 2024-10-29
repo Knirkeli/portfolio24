@@ -23,7 +23,7 @@ import { DisplayHeaderLogo } from "./logo";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
+    <header className="flex items-center justify-between p-4 bg-inherit text-white">
       <div className="mr-auto ml-4">
         <DisplayHeaderLogo />
       </div>

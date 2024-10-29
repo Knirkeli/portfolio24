@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Card } from "../ui/card"; // Adjust the import path as necessary
-import useProjectPosts from "../import/fetchProject"; // Adjust the import path as necessary
+import { Card } from "../ui/card";
+import useProjectPosts from "../import/fetchProject";
 
 const ProjectPostComponent = () => {
   const { projectPosts, urlFor } = useProjectPosts();

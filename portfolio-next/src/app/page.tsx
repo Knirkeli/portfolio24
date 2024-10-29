@@ -8,8 +8,7 @@ const options = { next: { revalidate: 60 } };
 
 export default async function IndexPage() {
   return (
-    <main className="flex bg-gradient-to-b from-teal-950 via-amber-700 to-gray-300 min-h-screen flex-col">
-      {/* <Cover /> */}
+    <main className="flex flex-col">
       <div className="space-y-12">
         <SloganSection />
         <WelcomeSection />

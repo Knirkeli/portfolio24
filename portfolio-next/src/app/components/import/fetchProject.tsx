@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 const client = createClient({
   projectId: "2rar6jsc",
@@ -10,7 +11,7 @@ const client = createClient({
 
 const builder = imageUrlBuilder(client);
 
-function urlFor(source) {
+function urlFor(source: SanityImageSource) {
   return builder.image(source);
 }
 

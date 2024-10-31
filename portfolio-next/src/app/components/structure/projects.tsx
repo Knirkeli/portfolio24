@@ -3,8 +3,19 @@ import Link from "next/link";
 import { Card } from "../ui/card";
 import useProjectPosts from "../import/fetchProject";
 
+interface ProjectPost {
+  slug: { current: string };
+  header: string;
+  images?: { url: () => string }[];
+  completionDate?: string;
+  inProgress?: boolean;
+}
+
 const ProjectPostComponent = () => {
-  const { projectPosts, urlFor } = useProjectPosts();
+  const { projectPosts, urlFor } = useProjectPosts() as {
+    projectPosts: ProjectPost[];
+    urlFor: (source: unknown) => { url: () => string };
+  };
 
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">

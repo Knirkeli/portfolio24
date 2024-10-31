@@ -2,14 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { fetchServices, Service, urlFor } from "../import/FetchServices";
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "../ui/card";
+import { Card } from "../ui/card";
 
 const WelcomeSection = () => {
   const [services, setServices] = useState<Service[]>([]);

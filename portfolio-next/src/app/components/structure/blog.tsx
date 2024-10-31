@@ -4,8 +4,16 @@ import Link from "next/link";
 import { Card } from "../ui/card"; // Adjust the import path as necessary
 import { fetchBlogPosts, urlFor } from "../import/fetchBlog"; // Adjust the import path as necessary
 
+interface BlogPost {
+  slug: { current: string };
+  title: string;
+  mainImage?: string;
+  author: { name: string };
+  publishedAt: string;
+}
+
 const BlogPostComponent = () => {
-  const [blogPosts, setBlogPosts] = useState([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
     fetchBlogPosts().then((data) => setBlogPosts(data));

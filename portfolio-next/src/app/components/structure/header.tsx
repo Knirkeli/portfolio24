@@ -1,22 +1,3 @@
-// "use client";
-// import React from "react";
-// import { DisplayHeaderLogo } from "./logo";
-
-// const Header: React.FC = () => {
-//   return (
-//     <header className="flex items-center space between p-4 bg-gray-800 text-white">
-//       <div className="">
-//         <DisplayHeaderLogo />
-//       </div>
-//       <div>
-//         <h1>Knirkefri Design</h1>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Header;
-
 "use client";
 import React from "react";
 import { DisplayHeaderLogo } from "./logo";

@@ -11,7 +11,6 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from "../components/ui/card"; // Import the Card components
 
 const DisplayContactInfo: React.FC = () => {

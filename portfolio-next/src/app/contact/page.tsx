@@ -11,7 +11,7 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-} from "../components/ui/card"; // Import the Card components
+} from "../components/ui/card";
 
 const DisplayContactInfo: React.FC = () => {
   const [contactInfo, setContactInfo] = useState<ContactInfo | null>(null);

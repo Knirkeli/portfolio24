@@ -38,7 +38,7 @@ const WelcomeSection = () => {
         {services.map((service, index) => (
           <Card
             key={index}
-            className="relative flex shadow-xl max-w-xs lg:max-w-sm xl:max-w-md mx-auto cursor-pointer transform transition duration-500 hover:scale-105"
+            className="relative flex shadow-2xl max-w-xs lg:max-w-sm xl:max-w-md mx-auto cursor-pointer border-none transform transition duration-500 hover:scale-105"
             onClick={() => handleCardClick(index)}
           >
             <img
